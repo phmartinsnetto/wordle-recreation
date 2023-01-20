@@ -6,7 +6,7 @@ In this document I'll register the steps by which I'll build the code and the ra
 so later I can have a somewaht detailed record of what has been done and why. I'm sure an experienced programmer will be able to accomplish the same tasks in
 more elegant and intelligent fashion, but I just thought that it would be more fun if I didn't follow any particular tutorial. Actually, the tutorials I usually find for specific apps and stuff too direct in terms of code, and I end up feeling that I'm just copying and not learning. But well, that's enough babbling.
 
--------------------------------------     1) Step One: So, what's the game all about?        -------------------
+-------------------------------------     1) Step One: So, what's the game all about?        --------------------------------------------
 
 First thing I did was actually playing the game, so I went to their site (https://www.nytimes.com/games/wordle/index.html) and played it once. I did have played
 this game in the past, so I still remember it well and one playthrough now was enough for me to remember the game's aspects. basically:
@@ -21,7 +21,7 @@ got to wait until next day to try again, and then it'll be a new word. Not only 
 challenged with the exact same word as you. So these features should also be included in the game.
 
 
---------------------------------------      2) Step Two: Structuring the game screen        --------------------
+--------------------------------------      2) Step Two: Structuring the game screen        -------------------------------------------
 
 Looking at the game webpage, I identified a top navigation menu with the title, some links to other games, a settings menu and a button that pops a window
 and show the game rules. I decided to include the title bar and the rules button, the rest I'll leave out. I'll try to do that with <nav> tag and a button,
