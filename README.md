@@ -10,7 +10,7 @@ more elegant and intelligent fashion, but I just thought that it would be more f
 
 First thing I did was actually playing the game, so I went to their site (https://www.nytimes.com/games/wordle/index.html) and played it once. I did have played
 this game in the past, so I still remember it well and one playthrough now was enough for me to remember the game's aspects. Basically:
-  - There is a word of six letters that you have to guess. The word is in English, and people's names seem not to be included in the possibilities.
+  - There is a word of five letters that you have to guess. The word is in English, and people's names seem not to be included in the possibilities.
   - You have 6 tries. In each try you make a guess of a word and you win the game if you get the word right.
   - If you guess wrong, the game will inform which letters of your guess are part of the target word. The game does that by coloring green the letters that are
   part of the word AND are in the exact same position in both the guess and target word. The game will color in yellow the letters that are part of the target
@@ -29,3 +29,18 @@ with <nav> tag and a button, maybe.
 Bellow there are the character's slots for all the words, already in display and in blank. I think I'll do them using <label> tags.
 And finally we have a keyboard, qwerty letters, Backspace and Enter buttons. So I'll think it's <button> tags for those.
 I structured that in a .html file and that'll be "root\index.html", the file to be initially loaded and make the game show up in the browser.
+
+ ------------------------------------           3) Step Three: Words Data             ------------------------------------------------
+  
+The basic component the game seems to be a list of English words, but we're only interested in words of 5 characters in length. And we won't include names
+in the list, as I believe they aren't included in the original game.
+This task may be organized this way:
+    1) Downloading a complete list of English words.
+    2) Filter for the 5 characters words online.
+    3) Download a complete list of English names of people and places.
+    4) Remove from our list all the words that match with an existing name.
+    5) Offer this list in a format that can be used by our Javascript program. So I believe a .JSON file would be the choice.
+
+We could call these our Data Acquisition and Data Cleaning tasks, and they'll be executed in Python, using the Pandas library. 
+
+For the Data Acquisition, I've chosen the 12dict word data in their "2of12inf" list(http://wordlist.aspell.net/12dicts-readme/#2of12inf), which doesn't include names, if I understood correctly. So steps 3) and 4) won't be necessary.
