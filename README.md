@@ -44,3 +44,5 @@ This task may be organized this way:
 We could call these our Data Acquisition and Data Cleaning tasks, and they'll be executed in Python, using the Pandas library. 
 
 For the Data Acquisition, I've chosen the 12dict word data in their "2of12inf" list(http://wordlist.aspell.net/12dicts-readme/#2of12inf), which doesn't include names, if I understood correctly. So steps 3) and 4) won't be necessary.
+
+The final filtered_wordlist.json file was put in the data directory. I've also included a Jupyter Notebook explaining this step.
