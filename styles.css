@@ -29,7 +29,14 @@ html, body {
     height: 3rem;
     width: 3rem;
     margin: 1px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+
 
 .key-btn {
     border: none;
