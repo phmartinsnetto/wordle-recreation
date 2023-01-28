@@ -1,6 +1,6 @@
 //import data from "./data/wordlist.json" assert {type: 'json'};
 
-const data = await fetch('./src/data/wordlist.json')
+const wordList = await fetch('./src/data/wordlist.json')
     .then(response => response.json());      
 
 function generateRandomNumber() {
@@ -17,17 +17,46 @@ function retrieveWord(wordList) {
 
 function handleButtonClick(id) {
     if (id == "enter") {
-        console.log("you pressed enter");
+        enterButtonClick();
     } else if (id == "backspace") {
         console.log('you pressed backspace');
     } else {
-        console.log('you pressed ' + id);
+        letterButtonClick(id);
     }
 }
 
+function letterButtonClick(id) {
+    if (pos <= 4) {
+        document.getElementById("row-" + row).getElementsByClassName("tile")[pos].innerHTML = id;
+        pos++;
+        wordGuess.push(id);
+        console.log(wordGuess);
+    }
+}
+
+function backspaceButtonClick() {
+
+}
+
+function enterButtonClick() {
+    var guess = wordGuess.join("").toLowerCase();
+    if (Object.values(wordList).includes(guess)) {
+        row++
+        pos = 0
+
+        console.log("a palavra existe na lista");
+        console.log ("a expressão é: " + Object.values(wordList).includes(guess))
+    }
+
+}
+
+var row = 1;
+var pos = 0;
+var wordGuess = [];
+
 function main() {
-    console.log(data);
-    var targetWord = retrieveWord(data);
+    console.log(wordList);
+    var targetWord = retrieveWord(wordList);
     console.log(targetWord);
 
     // code below adds an event listener to all keyboard buttons,
