@@ -29,8 +29,15 @@ function main() {
     console.log(data);
     var targetWord = retrieveWord(data);
     console.log(targetWord);
-    document.querySelector(".key-btn").addEventListener("click", handleButtonClick(e.target.id));
 
+    // code below adds an event listener to all keyboard buttons,
+    // and pass their id to the handler function
+    document.querySelectorAll('.key-btn')
+  .forEach(item => {
+    item.addEventListener('click', function() {
+      handleButtonClick(this.id);
+    })
+  });
 }
 
 // this function runs when the DOM is ready, i.e. when the document has been parsed
