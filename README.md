@@ -1,5 +1,5 @@
 # wordle-recreation
-Functional recreation of the web game Wordle, using HTML, CSS and Javascript.
+Functional recreation of the web game Wordle, using HTML, CSS, Javascript and Python Pandas.
 
 In this document I'll register the steps by which I'll build the code and the rationale behind each step of the development.
 * I'm by no means a pro, quite the contrary, so this surely won't be an optimal way of achieving the "Wordle App" result. I'll simply write my steps
